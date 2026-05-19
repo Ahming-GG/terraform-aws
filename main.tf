@@ -19,7 +19,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "web_sg" {
-  name = "terraform-web-sg-${terraform.workspace}"
+  name = "terraform-web-sg"
 
   ingress {
     description = "Allow SSH"
@@ -46,7 +46,7 @@ resource "aws_security_group" "web_sg" {
   }
 
   tags = {
-    Name = "terraform-web-sg-${terraform.workspace}"
+    Name = "terraform-web-sg"
   }
 }
 
